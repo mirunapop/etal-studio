@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<title>og-image template</title>
+<!-- Template for /og-image.png (1200×630). Render with: cd tools && npm run images -->
+<link rel="stylesheet" href="../assets/fonts.css">
+<style>
+  :root{--paper:#F3F2EC; --ink:#14181B; --ink-2:#575F61; --accent:#14534A}
+  *{box-sizing:border-box}
+  html,body{margin:0; width:1200px; height:630px; overflow:hidden}
+  body{background:var(--paper); color:var(--ink); font-family:'Source Serif 4', Georgia, serif; position:relative}
+  .frame{position:absolute; inset:0; padding:76px 88px 72px; display:flex; flex-direction:column}
+  .mark{width:136px; height:136px; border-radius:28px; background:var(--accent); color:var(--paper); display:grid; place-items:center;
+        font-weight:700; font-size:68px; letter-spacing:-.02em; padding-bottom:6px}
+  .bottom{margin-top:auto}
+  .name{font-weight:700; font-size:128px; line-height:1; letter-spacing:-.03em; margin:0}
+  .name em{font-style:normal; color:var(--accent)}
+  .line{font-style:italic; font-weight:400; font-size:46px; line-height:1.25; color:var(--ink-2); margin:26px 0 0; letter-spacing:-.005em}
+  .line em{color:var(--accent)}
+  .rule{position:absolute; left:0; right:0; bottom:0; height:14px; background:var(--accent)}
+</style>
+</head>
+<body>
+  <div class="frame">
+    <div class="mark">al.</div>
+    <div class="bottom">
+      <h1 class="name">Et al<em>.</em> Studio</h1>
+      <p class="line">Websites for research projects, consortia, <em>et&nbsp;al.</em></p>
+    </div>
+  </div>
+  <div class="rule"></div>
+</body>
+</html>
