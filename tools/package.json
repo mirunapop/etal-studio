@@ -1,0 +1,17 @@
+{
+  "name": "etal-studio-tools",
+  "private": true,
+  "description": "Dev-only tooling: fonts to copy into assets/fonts, Playwright to render images. Not needed to run the site.",
+  "type": "module",
+  "scripts": {
+    "fonts": "node copy-fonts.mjs",
+    "images": "node render-images.mjs"
+  },
+  "devDependencies": {
+    "@fontsource/ibm-plex-mono": "5.3.0",
+    "@fontsource/ibm-plex-sans": "5.3.0",
+    "@fontsource/source-serif-4": "5.3.1",
+    "@fontsource/space-grotesk": "5.3.0",
+    "playwright": "1.65.1"
+  }
+}
