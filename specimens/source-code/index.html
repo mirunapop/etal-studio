@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Source Code — Summer school in digital methods (Specimen by Et al. Studio)</title>
+<meta name="description" content="Source Code is an invented summer school: a specimen homepage designed by Et al. Studio. Not a real event.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#FFF6EA; --cream-2:#FBEBD5; --ink:#1B1B1F; --ink-2:#4A453F; --tomato:#E0472B; --tomato-ink:#B3321F; --line:#E8DCC8}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth; -webkit-text-size-adjust:100%}
+body{margin:0; font-family:'Space Grotesk',system-ui,sans-serif; color:var(--ink); background:var(--cream); font-size:17px; line-height:1.55; -webkit-font-smoothing:antialiased}
+a{color:inherit}
+h1,h2,h3{margin:0; text-wrap:balance; letter-spacing:-.03em}
+:focus-visible{outline:3px solid var(--tomato); outline-offset:3px}
+.wrap{max-width:1160px; margin:0 auto; padding:0 24px}
+.mono{font-family:'IBM Plex Mono',monospace}
+.kick{font-family:'IBM Plex Mono',monospace; font-size:12.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--tomato-ink)}
+
+.specbar{background:#EEE27A; color:#2E2800; font-family:'IBM Plex Mono',monospace; font-size:12.5px}
+.specbar .wrap{display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; padding-top:8px; padding-bottom:8px}
+.specbar a{font-weight:500}
+
+header.top{position:sticky; top:0; z-index:20; background:rgba(255,246,234,.92); -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px); border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex; justify-content:space-between; align-items:center; min-height:66px; gap:16px; flex-wrap:wrap}
+.logo{font-family:'IBM Plex Mono',monospace; font-weight:500; font-size:16px; text-decoration:none}
+header.top nav{display:flex; align-items:center; gap:22px; font-size:15px; flex-wrap:wrap}
+header.top nav a{text-decoration:none; color:var(--ink-2)}
+header.top nav a:hover{color:var(--ink)}
+header.top nav a.apply{background:var(--ink); color:var(--cream); padding:9px 18px; border-radius:999px; font-weight:700}
+header.top nav a.apply:hover{background:var(--tomato-ink)}
+
+.hero{padding:72px 0 64px}
+.hero h1{font-size:clamp(64px,11vw,148px); line-height:.86; letter-spacing:-.055em; font-weight:700; margin-top:18px}
+.hero h1 span{color:var(--tomato)}
+.hero .sub{display:grid; grid-template-columns:1.1fr .9fr; gap:48px; margin-top:40px; align-items:end}
+.hero .sub p{margin:0; font-size:21px; line-height:1.45; color:var(--ink-2); max-width:36ch}
+.facts{display:grid; grid-template-columns:repeat(3,1fr); gap:12px}
+.fact{border-radius:14px; padding:18px 18px 16px}
+.fact small{display:block; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.1em; text-transform:uppercase}
+.fact b{display:block; font-size:24px; line-height:1.1; margin-top:8px; letter-spacing:-.02em}
+.f1{background:var(--ink); color:var(--cream)} .f1 small{color:#F7B59F}
+.f2{background:var(--tomato); color:#fff}
+.f3{background:#fff; border:1px solid var(--line)} .f3 small{color:#7D7164}
+.cta{display:flex; gap:12px; flex-wrap:wrap; margin-top:36px}
+.btn{display:inline-flex; align-items:center; min-height:52px; padding:0 26px; border-radius:999px; font-weight:700; font-size:17px; text-decoration:none}
+.btn-ink{background:var(--ink); color:var(--cream)} .btn-ink:hover{background:var(--tomato-ink)}
+.btn-line{border:2px solid var(--ink)} .btn-line:hover{background:var(--cream-2)}
+
+.ticker{background:var(--ink); color:var(--cream); overflow:hidden; white-space:nowrap; font-family:'IBM Plex Mono',monospace; font-size:14px}
+.ticker div{display:inline-block; padding:14px 0; animation:tick 38s linear infinite}
+.ticker span{margin:0 26px}
+.ticker span::before{content:"▸ "; color:var(--tomato)}
+@keyframes tick{from{transform:translateX(0)} to{transform:translateX(-50%)}}
+
+section{padding:88px 0; border-bottom:1px solid var(--line)}
+.sh{display:flex; justify-content:space-between; align-items:end; gap:32px; flex-wrap:wrap; margin-bottom:40px}
+.sh h2{font-size:clamp(36px,5vw,64px); line-height:.95; font-weight:700; margin-top:10px}
+.sh p{margin:0; color:var(--ink-2); max-width:44ch}
+
+.learn{display:grid; grid-template-columns:repeat(4,1fr); gap:16px}
+.learn div{background:#fff; border:1px solid var(--line); border-radius:14px; padding:24px 22px}
+.learn .n{font-family:'IBM Plex Mono',monospace; font-size:13px; color:var(--tomato-ink)}
+.learn h3{font-size:22px; margin-top:10px; line-height:1.1}
+.learn p{margin:10px 0 0; font-size:15px; color:var(--ink-2)}
+
+.days{border-top:2px solid var(--ink)}
+.day{display:grid; grid-template-columns:150px 1fr 1fr; gap:24px; padding:20px 0; border-bottom:1px solid var(--line); align-items:baseline}
+.day .d{font-weight:700; font-size:22px}
+.day .d small{display:block; font-family:'IBM Plex Mono',monospace; font-weight:400; font-size:12px; color:var(--ink-2); letter-spacing:.06em}
+.day b{display:block; font-size:16.5px}
+.day span{display:block; font-size:14.5px; color:var(--ink-2)}
+.day .slot{font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--tomato-ink); letter-spacing:.06em; text-transform:uppercase; margin-bottom:2px}
+
+.speakers{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
+.sp{display:flex; gap:14px; align-items:center; background:#fff; border:1px solid var(--line); border-radius:14px; padding:18px}
+.sp i{flex:none; width:52px; height:52px; border-radius:50%; background:var(--cream-2); display:grid; place-items:center; font-style:normal; font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--tomato-ink)}
+.sp b{display:block; font-size:16.5px; line-height:1.25}
+.sp span{display:block; font-size:14px; color:var(--ink-2)}
+.note{font-family:'IBM Plex Mono',monospace; font-size:12.5px; color:var(--ink-2); margin-top:20px}
+
+.practical{display:grid; grid-template-columns:repeat(2,1fr); gap:0 48px}
+.practical div{display:grid; grid-template-columns:140px 1fr; gap:16px; padding:16px 0; border-top:1px solid var(--line)}
+.practical dt{font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--tomato-ink); padding-top:3px}
+.practical dd{margin:0; font-size:16px}
+.practical dd span{display:block; font-size:14px; color:var(--ink-2)}
+
+.apply{background:var(--tomato); color:#fff; border-bottom:0}
+.apply .kick{color:#FFE1D8}
+.apply h2{font-size:clamp(44px,7vw,96px); line-height:.9; font-weight:700; letter-spacing:-.05em; margin-top:12px}
+.steps{display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:40px}
+.steps div{background:rgba(255,255,255,.12); border-radius:14px; padding:22px}
+.steps b{display:block; font-size:19px}
+.steps span{display:block; font-size:15px; color:#FFE9E3; margin-top:6px}
+.apply .btn-ink{margin-top:36px}
+
+footer{background:var(--ink); color:#CFC7BC; padding:40px 0 48px; font-size:14px}
+footer .wrap{display:flex; justify-content:space-between; gap:24px; flex-wrap:wrap}
+footer .credit{font-family:'IBM Plex Mono',monospace; font-size:12.5px}
+footer .credit a{color:#EEE27A}
+
+@media (max-width:960px){
+  .hero .sub{grid-template-columns:1fr; gap:28px}
+  .learn{grid-template-columns:1fr 1fr}
+  .speakers,.steps{grid-template-columns:1fr}
+  .practical{grid-template-columns:1fr}
+  .day{grid-template-columns:110px 1fr; }
+  .day > div:last-child{grid-column:2}
+}
+@media (max-width:560px){
+  body{font-size:16px}
+  .learn,.facts{grid-template-columns:1fr}
+  .day{grid-template-columns:1fr; gap:8px}
+  .day > div:last-child{grid-column:auto}
+  .practical div{grid-template-columns:1fr; gap:4px}
+  section{padding:64px 0}
+  header.top nav a:not(.apply){display:none}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto} .ticker div{animation:none}}
+</style>
+</head>
+<body>
+
+<div class="specbar"><div class="wrap"><span>A specimen by Et al. Studio. Source Code is an invented summer school: its dates, fees and speakers are not real.</span><a href="../index.html">← All specimens</a></div></div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top">&lt;source code&gt;</a>
+    <nav aria-label="Source Code">
+      <a href="#learn">What you'll learn</a>
+      <a href="#programme">Programme</a>
+      <a href="#speakers">Speakers</a>
+      <a href="#practical">Practical</a>
+      <a class="apply" href="#apply">Apply</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<div class="hero">
+  <div class="wrap">
+    <div class="kick">Summer school · 2nd edition · Amsterdam</div>
+    <h1>Code for<br>historians<span>.</span></h1>
+    <div class="sub">
+      <p>Five days of digital methods for historians and social scientists. Bring your own sources. Leave able to search, count, connect and map them.</p>
+      <div class="facts">
+        <div class="fact f1"><small>Dates</small><b>23–27 Aug 2027</b></div>
+        <div class="fact f2"><small>Apply by</small><b>1 May 2027</b></div>
+        <div class="fact f3"><small>Fee</small><b>from €250</b></div>
+      </div>
+    </div>
+    <div class="cta">
+      <a class="btn btn-ink" href="#apply">Apply now</a>
+      <a class="btn btn-line" href="#programme">See the programme</a>
+    </div>
+  </div>
+</div>
+
+<div class="ticker" aria-hidden="true"><div>
+  <span>No programming experience needed</span><span>Max. 30 participants</span><span>Bring your own sources</span><span>Python and open tools</span><span>Lunches included</span><span>Certificate of participation</span>
+  <span>No programming experience needed</span><span>Max. 30 participants</span><span>Bring your own sources</span><span>Python and open tools</span><span>Lunches included</span><span>Certificate of participation</span>
+</div></div>
+
+<section id="learn">
+  <div class="wrap">
+    <div class="sh">
+      <div><div class="kick">What you'll learn</div><h2>Four methods,<br>your own material.</h2></div>
+      <p>Every afternoon you apply the morning's method to sources you bring: letters, newspapers, registers, interviews.</p>
+    </div>
+    <div class="learn">
+      <div><span class="n">01</span><h3>Text mining</h3><p>Search and count across thousands of digitised pages, and know what the counts can and can't tell you.</p></div>
+      <div><span class="n">02</span><h3>Networks</h3><p>Turn correspondence or membership lists into networks, and read them critically.</p></div>
+      <div><span class="n">03</span><h3>Maps</h3><p>Place people, events and records on historical maps.</p></div>
+      <div><span class="n">04</span><h3>AI, carefully</h3><p>Where language models help with transcription and tagging, and where they quietly get things wrong.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="programme">
+  <div class="wrap">
+    <div class="sh">
+      <div><div class="kick">Programme</div><h2>Monday to Friday</h2></div>
+      <p>Mornings are taught. Afternoons are hands-on, with tutors at every table.</p>
+    </div>
+    <div class="days">
+      <div class="day"><div class="d">Mon<small>23 Aug</small></div><div><span class="slot">Morning</span><b>From archive to data</b><span>What changes when sources become data</span></div><div><span class="slot">Afternoon</span><b>Setting up</b><span>Your sources, your laptop, your first script</span></div></div>
+      <div class="day"><div class="d">Tue<small>24 Aug</small></div><div><span class="slot">Morning</span><b>Text mining</b><span>Searching, counting, comparing</span></div><div><span class="slot">Afternoon</span><b>Lab</b><span>Mining your own corpus</span></div></div>
+      <div class="day"><div class="d">Wed<small>25 Aug</small></div><div><span class="slot">Morning</span><b>Networks</b><span>Who knew whom, and how we know</span></div><div><span class="slot">Afternoon</span><b>Lab</b><span>Building your first network</span></div></div>
+      <div class="day"><div class="d">Thu<small>26 Aug</small></div><div><span class="slot">Morning</span><b>Maps</b><span>Historical geography with open tools</span></div><div><span class="slot">Afternoon</span><b>Lab</b><span>Mapping your records</span></div></div>
+      <div class="day"><div class="d">Fri<small>27 Aug</small></div><div><span class="slot">Morning</span><b>AI, carefully</b><span>Transcription, tagging and checking</span></div><div><span class="slot">Afternoon</span><b>Show and tell</b><span>Five-minute presentations, then drinks</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="speakers">
+  <div class="wrap">
+    <div class="sh">
+      <div><div class="kick">Speakers</div><h2>Taught by people<br>who use it.</h2></div>
+      <p>Historians and social scientists who use these methods in their own research, plus two research software engineers.</p>
+    </div>
+    <div class="speakers">
+      <div class="sp"><i>01</i><div><b>Economic historian</b><span>Text mining in trade records</span></div></div>
+      <div class="sp"><i>02</i><div><b>Sociologist</b><span>Network analysis</span></div></div>
+      <div class="sp"><i>03</i><div><b>Historical geographer</b><span>Mapping archives</span></div></div>
+      <div class="sp"><i>04</i><div><b>Media historian</b><span>Digitised newspapers</span></div></div>
+      <div class="sp"><i>05</i><div><b>Research software engineer</b><span>Python for the humanities</span></div></div>
+      <div class="sp"><i>06</i><div><b>Research software engineer</b><span>Language models in research</span></div></div>
+    </div>
+    <p class="note">On a real site each speaker has a name, photo and short bio.</p>
+  </div>
+</section>
+
+<section id="practical">
+  <div class="wrap">
+    <div class="sh">
+      <div><div class="kick">Practical</div><h2>The details</h2></div>
+    </div>
+    <dl class="practical">
+      <div><dt>Who</dt><dd>PhD candidates, researchers and archivists<span>No programming experience needed</span></dd></div>
+      <div><dt>Where</dt><dd>A university campus in Amsterdam<span>Step-free access throughout</span></dd></div>
+      <div><dt>Fee</dt><dd>€250 for PhD candidates, €450 for others<span>Includes lunches and course materials</span></dd></div>
+      <div><dt>Bring</dt><dd>A laptop and a set of your own sources<span>We'll help you prepare them beforehand</span></dd></div>
+      <div><dt>Places</dt><dd>30 participants<span>Selected on motivation and fit</span></dd></div>
+      <div><dt>Stay</dt><dd>Accommodation not included<span>We'll send a list of nearby options</span></dd></div>
+    </dl>
+  </div>
+</section>
+
+<section id="apply" class="apply">
+  <div class="wrap">
+    <div class="kick">Apply</div>
+    <h2>Apply by<br>1 May 2027.</h2>
+    <div class="steps">
+      <div><b>1 · Tell us about your sources</b><span>Half a page on what you work with and what you'd like to do with it.</span></div>
+      <div><b>2 · Hear back by 1 June</b><span>We select for a mix of disciplines, career stages and sources.</span></div>
+      <div><b>3 · Prepare together</b><span>A short online session in July to get your sources and laptop ready.</span></div>
+    </div>
+    <a class="btn btn-ink" href="#apply">Start your application</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Source Code · Summer school in digital methods</span>
+    <span class="credit">Specimen designed and built by <a href="../../index.html">Et al. Studio</a>. Every date, fee and speaker here is invented.</span>
+  </div>
+</footer>
+</body>
+</html>
