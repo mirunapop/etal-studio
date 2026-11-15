@@ -185,7 +185,7 @@
       <div>
         <h3>Still writing the proposal?</h3>
         <p>Paste this into your budget. The price is fixed, so the line won't change after you submit.</p>
-        <a class="finlink" href="supplier-details/index.html">Supplier details for your finance office →</a>
+        <a class="finlink" hidden data-release="company-info" href="supplier-details/index.html">Supplier details for your finance office →</a>
       </div>
       <div class="snippet">
         <span class="lab">Budget line</span>
@@ -243,7 +243,7 @@
         <div>
           <h3>Et al. Studio</h3>
           <span class="aff">Amsterdam, the Netherlands</span>
-          <p style="font-size:15px">Run by Myra Pop, software engineer. <span class="todo">optional: one true line on background + LinkedIn</span></p>
+          <p style="font-size:15px">Run by Myra Pop, software engineer.</p>
         </div>
       </div>
       <div class="mailbox">
@@ -278,9 +278,10 @@
   <footer>
     <div class="legal">
       <span>Et al. Studio · Myra Pop · Amsterdam</span>
-      <span>KvK <span class="todo">number</span></span>
-      <span>btw-id <span class="todo">number</span></span>
-      <a href="supplier-details/index.html">Supplier details</a>
+      <span hidden data-release="company-info">KvK <span class="todo" data-fill="kvk">number</span></span>
+      <span hidden data-release="company-info">btw-id <span class="todo" data-fill="vat">number</span></span>
+      <span hidden data-release="company-info">Address <span class="todo" data-fill="address">address</span></span>
+      <a hidden data-release="company-info" href="supplier-details/index.html">Supplier details</a>
       <span><span class="todo">privacy statement link</span></span>
     </div>
     <span>Websites for research projects, consortia, et al.</span>

@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Supplier details — Et al. Studio</title>
 <meta name="description" content="Supplier details for finance offices and research support offices: KvK, VAT, ordering and payment.">
+<meta name="robots" content="noindex" data-release="company-info">
 <meta property="og:title" content="Et al. Studio — websites for research projects, consortia, et al.">
 <meta property="og:description" content="Your website is a deliverable. Fixed price from €4,500, two weeks of build time, yours to keep.">
 <meta property="og:type" content="website">
@@ -39,9 +40,9 @@
     <p class="intro">For finance offices and research support offices registering Et al. Studio as a supplier or raising a purchase order.</p>
     <dl class="fin">
       <div><dt>Supplier</dt><dd>Myra Pop, trading as Et al. Studio<span class="sub">Eenmanszaak, registered in the Netherlands</span></dd></div>
-      <div><dt>KvK</dt><dd><span class="todo">KvK number, after registration</span></dd></div>
-      <div><dt>VAT ID</dt><dd><span class="todo">btw-id, after registration</span><span class="sub">21% Dutch VAT on every invoice</span></dd></div>
-      <div><dt>Address</dt><dd><span class="todo">business address</span></dd></div>
+      <div hidden data-release="company-info"><dt>KvK</dt><dd><span class="todo" data-fill="kvk">KvK number, after registration</span></dd></div>
+      <div hidden data-release="company-info"><dt>VAT ID</dt><dd><span class="todo" data-fill="vat">btw-id, after registration</span><span class="sub">21% Dutch VAT on every invoice</span></dd></div>
+      <div hidden data-release="company-info"><dt>Address</dt><dd><span class="todo" data-fill="address">business address</span></dd></div>
       <div><dt>Ordering</dt><dd>A signed order confirmation plus your purchase order number<span class="sub">The PO number goes on every invoice</span></dd></div>
       <div><dt>Payment</dt><dd>40% on signature, 60% on launch<span class="sub">30-day payment terms</span></dd></div>
       <div><dt>Hosting</dt><dd>In the EU, with the account in your institute's name</dd></div>
@@ -55,9 +56,10 @@
   <footer>
     <div class="legal">
       <span>Et al. Studio · Myra Pop · Amsterdam</span>
-      <span>KvK <span class="todo">number</span></span>
-      <span>btw-id <span class="todo">number</span></span>
-      <a href="../supplier-details/index.html">Supplier details</a>
+      <span hidden data-release="company-info">KvK <span class="todo" data-fill="kvk">number</span></span>
+      <span hidden data-release="company-info">btw-id <span class="todo" data-fill="vat">number</span></span>
+      <span hidden data-release="company-info">Address <span class="todo" data-fill="address">address</span></span>
+      <a hidden data-release="company-info" href="../supplier-details/index.html">Supplier details</a>
       <span><span class="todo">privacy statement link</span></span>
     </div>
     <span>Websites for research projects, consortia, et al.</span>
