@@ -359,8 +359,6 @@ footer a{color:var(--accent)}
 .prose ul{padding-left:1.2em; margin:0 0 1em}
 .prose li{margin:0 0 .5em}
 .prose a{color:var(--accent)}
-.draft-note{margin:0 0 22px; padding:12px 16px; border:1px dashed var(--accent); border-radius:3px; background:var(--accent-soft); font-family:var(--mono); font-size:13px; line-height:1.5}
-.draft-note b{font-weight:500; color:var(--accent-ink)}
 
 /* stretched link: the whole specimen preview opens the homepage, but only the "Open" link is in the accessibility tree */
 .browser-link .open-hint::after{content:""; position:absolute; inset:0; z-index:2}
