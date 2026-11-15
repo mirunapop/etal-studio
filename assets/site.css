@@ -352,3 +352,12 @@ a.browser-link:hover .open-hint{background:#14534A; color:#fff}
 .cl-img .cell-btn:hover{background:rgba(255,79,180,.15)}
 .cl-img .cell-btn[aria-pressed="true"]{background:#FF4FB4; color:#2A0019}
 .cl-img .cell-read{font-family:var(--mono); font-size:10.5px; color:#AEB6BF}
+
+/* privacy / long-form text */
+.prose h2{font-family:var(--serif); font-weight:600; font-size:24px; line-height:1.2; letter-spacing:-.015em; margin:38px 0 10px}
+.prose p,.prose li{max-width:66ch}
+.prose ul{padding-left:1.2em; margin:0 0 1em}
+.prose li{margin:0 0 .5em}
+.prose a{color:var(--accent)}
+.draft-note{margin:0 0 22px; padding:12px 16px; border:1px dashed var(--accent); border-radius:3px; background:var(--accent-soft); font-family:var(--mono); font-size:13px; line-height:1.5}
+.draft-note b{font-weight:500; color:var(--accent-ink)}
