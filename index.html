@@ -8,10 +8,16 @@
 <meta property="og:title" content="Et al. Studio — websites for research projects, consortia, et al.">
 <meta property="og:description" content="Your website is a deliverable. Fixed price from €4,500, two weeks of build time, yours to keep.">
 <meta property="og:type" content="website">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%2314534A'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='30' font-weight='700' text-anchor='middle' fill='%23F3F2EC'%3Eal.%3C/text%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
+<meta property="og:url" content="https://etal.studio/">
+<meta property="og:image" content="https://etal.studio/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Et al. Studio. Websites for research projects, consortia, et al.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="canonical" href="https://etal.studio/">
+<link rel="stylesheet" href="assets/fonts.css">
 <link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
@@ -185,7 +191,7 @@
       <div>
         <h3>Still writing the proposal?</h3>
         <p>Paste this into your budget. The price is fixed, so the line won't change after you submit.</p>
-        <a class="finlink" href="supplier-details/index.html">Supplier details for your finance office →</a>
+        <a class="finlink" hidden data-release="company-info" href="supplier-details/index.html">Supplier details for your finance office →</a>
       </div>
       <div class="snippet">
         <span class="lab">Budget line</span>
@@ -243,13 +249,13 @@
         <div>
           <h3>Et al. Studio</h3>
           <span class="aff">Amsterdam, the Netherlands</span>
-          <p style="font-size:15px">Run by Myra Pop, software engineer. <span class="todo">optional: one true line on background + LinkedIn</span></p>
+          <p style="font-size:15px">Run by Myra Pop, software engineer.</p>
         </div>
       </div>
       <div class="mailbox">
         <span class="lab">Email</span>
         <div class="addr">
-          <a id="addr" href="mailto:hello@etal.studio">hello@etal.studio</a>
+          <a id="addr" href="mailto:hello@etal.studio?subject=Website%20for%20%5Bproject%20name%5D&amp;body=Project%3A%0D%0AFunder%3A%0D%0ALink%20to%20abstract%3A%0D%0ANeeds%20to%20be%20live%20by%3A">hello@etal.studio</a>
           <button class="copy" type="button" data-copy="addr">Copy</button>
         </div>
         <p style="font-size:14.5px; color:var(--ink-2); margin:18px 0 0">Replies within two working days.</p>
@@ -278,10 +284,11 @@
   <footer>
     <div class="legal">
       <span>Et al. Studio · Myra Pop · Amsterdam</span>
-      <span>KvK <span class="todo">number</span></span>
-      <span>btw-id <span class="todo">number</span></span>
-      <a href="supplier-details/index.html">Supplier details</a>
-      <span><span class="todo">privacy statement link</span></span>
+      <span hidden data-release="company-info">KvK <span class="todo" data-fill="kvk">number</span></span>
+      <span hidden data-release="company-info">btw-id <span class="todo" data-fill="vat">number</span></span>
+      <span hidden data-release="company-info">Address <span class="todo" data-fill="address">address</span></span>
+      <a hidden data-release="company-info" href="supplier-details/index.html">Supplier details</a>
+      <a href="privacy/index.html">Privacy</a>
     </div>
     <span>Websites for research projects, consortia, et al.</span>
   </footer>

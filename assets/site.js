@@ -90,7 +90,7 @@
       urlEl.textContent = panels[i].getAttribute('data-url');
       var href = panels[i].getAttribute('data-href'), nm = panels[i].getAttribute('data-name');
       var lk = document.getElementById('stackLink'), ob = document.getElementById('openFull');
-      if (lk) { lk.href = href; lk.setAttribute('aria-label', 'Open the full ' + nm + ' homepage'); }
+      if (lk) { lk.href = href; var sr = lk.querySelector('.sr-only'); if (sr) sr.textContent = ' the full ' + nm + ' homepage'; }
       if (ob) { ob.href = href; ob.textContent = 'Open the full ' + nm + ' homepage →'; }
       var others = [];
       Array.prototype.forEach.call(panels, function(p, j){ if (j !== i) others.push(p.getAttribute('data-bg')); });
