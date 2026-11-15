@@ -277,7 +277,7 @@ footer a{color:var(--accent)}
 .spec-list{display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:40px}
 .spec-card{background:var(--surface); border:1px solid var(--rule); border-radius:4px; padding:22px 22px 20px; display:flex; flex-direction:column; gap:8px}
 .spec-card .lab{display:block}
-.spec-card h3{font-family:var(--serif); font-size:21px; font-weight:600}
+.spec-card h2{font-family:var(--serif); font-size:21px; font-weight:600}
 .spec-card p{margin:0; font-size:14.5px; color:var(--ink-2)}
 .spec-card .go{margin-top:auto; padding-top:10px; font-size:14.5px; font-weight:600; color:var(--accent)}
 .spec-card .soon{margin-top:auto; padding-top:10px; font-family:var(--mono); font-size:12px; color:var(--ink-2)}
@@ -319,10 +319,10 @@ footer a{color:var(--accent)}
 }
 
 /* specimens: open affordances */
-a.browser-link{display:block; text-decoration:none; color:inherit; transition:transform .25s, box-shadow .25s}
-a.browser-link:hover{transform:translateY(-3px); box-shadow:0 30px 60px -28px rgba(5,7,10,.6)}
-.browser .open-hint{flex:none; font-family:var(--mono); font-size:11px; font-weight:500; color:#14534A; background:#fff; border:1px solid #14534A; border-radius:3px; padding:2px 8px}
-a.browser-link:hover .open-hint{background:#14534A; color:#fff}
+.browser-link{display:block; color:inherit; transition:transform .25s, box-shadow .25s}
+.browser-link:hover{transform:translateY(-3px); box-shadow:0 30px 60px -28px rgba(5,7,10,.6)}
+.browser .open-hint{text-decoration:none; flex:none; font-family:var(--mono); font-size:11px; font-weight:500; color:#14534A; background:#fff; border:1px solid #14534A; border-radius:3px; padding:2px 8px}
+.browser-link:hover .open-hint,.open-hint:focus-visible{background:#14534A; color:#fff}
 .open-row{display:flex; align-items:center; gap:18px; flex-wrap:wrap; margin-top:26px}
 .open-note{font-size:14.5px; color:var(--ink-2)}
 .btn-sm{min-height:44px; padding:0 18px; font-size:14.5px; align-self:flex-start; margin-top:auto}
@@ -361,3 +361,8 @@ a.browser-link:hover .open-hint{background:#14534A; color:#fff}
 .prose a{color:var(--accent)}
 .draft-note{margin:0 0 22px; padding:12px 16px; border:1px dashed var(--accent); border-radius:3px; background:var(--accent-soft); font-family:var(--mono); font-size:13px; line-height:1.5}
 .draft-note b{font-weight:500; color:var(--accent-ink)}
+
+/* stretched link: the whole specimen preview opens the homepage, but only the "Open" link is in the accessibility tree */
+.browser-link .open-hint::after{content:""; position:absolute; inset:0; z-index:2}
+.browser-link:has(.open-hint:focus-visible){outline:2px solid var(--accent); outline-offset:3px; border-radius:6px}
+.sr-only{position:absolute; width:1px; height:1px; margin:-1px; padding:0; overflow:hidden; clip:rect(0 0 0 0); clip-path:inset(50%); white-space:nowrap; border:0}

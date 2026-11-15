@@ -6,10 +6,11 @@
 <title>Source Code — Summer school in digital methods (Specimen by Et al. Studio)</title>
 <meta name="description" content="Source Code is an invented summer school: a specimen homepage designed by Et al. Studio. Not a real event.">
 <meta name="robots" content="noindex">
+<link rel="icon" href="data:,">
 <link rel="stylesheet" href="../../assets/fonts.css">
 <link rel="stylesheet" href="../../assets/fonts-grotesk.css">
 <style>
-:root{--cream:#FFF6EA; --cream-2:#FBEBD5; --ink:#1B1B1F; --ink-2:#4A453F; --tomato:#E0472B; --tomato-ink:#B3321F; --line:#E8DCC8}
+:root{--cream:#FFF6EA; --cream-2:#FBEBD5; --ink:#1B1B1F; --ink-2:#4A453F; --tomato:#E0472B; --tomato-ink:#B3321F; --tomato-deep:#C93B20; --line:#E8DCC8}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth; -webkit-text-size-adjust:100%}
 body{margin:0; font-family:'Space Grotesk',system-ui,sans-serif; color:var(--ink); background:var(--cream); font-size:17px; line-height:1.55; -webkit-font-smoothing:antialiased}
@@ -43,7 +44,7 @@ header.top nav a.apply:hover{background:var(--tomato-ink)}
 .fact small{display:block; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.1em; text-transform:uppercase}
 .fact b{display:block; font-size:24px; line-height:1.1; margin-top:8px; letter-spacing:-.02em}
 .f1{background:var(--ink); color:var(--cream)} .f1 small{color:#F7B59F}
-.f2{background:var(--tomato); color:#fff}
+.f2{background:var(--tomato-deep); color:#fff}
 .f3{background:#fff; border:1px solid var(--line)} .f3 small{color:#7D7164}
 .cta{display:flex; gap:12px; flex-wrap:wrap; margin-top:36px}
 .btn{display:inline-flex; align-items:center; min-height:52px; padding:0 26px; border-radius:999px; font-weight:700; font-size:17px; text-decoration:none}
@@ -88,13 +89,13 @@ section{padding:88px 0; border-bottom:1px solid var(--line)}
 .practical dd{margin:0; font-size:16px}
 .practical dd span{display:block; font-size:14px; color:var(--ink-2)}
 
-.apply{background:var(--tomato); color:#fff; border-bottom:0}
-.apply .kick{color:#FFE1D8}
+.apply{background:var(--tomato-deep); color:#fff; border-bottom:0}
+.apply .kick{color:#fff}
 .apply h2{font-size:clamp(44px,7vw,96px); line-height:.9; font-weight:700; letter-spacing:-.05em; margin-top:12px}
 .steps{display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:40px}
-.steps div{background:rgba(255,255,255,.12); border-radius:14px; padding:22px}
+.steps div{background:rgba(0,0,0,.16); border-radius:14px; padding:22px}
 .steps b{display:block; font-size:19px}
-.steps span{display:block; font-size:15px; color:#FFE9E3; margin-top:6px}
+.steps span{display:block; font-size:15px; color:#fff; margin-top:6px}
 .apply .btn-ink{margin-top:36px}
 
 footer{background:var(--ink); color:#CFC7BC; padding:40px 0 48px; font-size:14px}
@@ -124,7 +125,7 @@ footer .credit a{color:#EEE27A}
 </head>
 <body>
 
-<div class="specbar"><div class="wrap"><span>A specimen by Et al. Studio. Source Code is an invented summer school: its dates, fees and speakers are not real.</span><a href="../index.html">← All specimens</a></div></div>
+<aside class="specbar" aria-label="About this specimen"><div class="wrap"><span>A specimen by Et al. Studio. Source Code is an invented summer school: its dates, fees and speakers are not real.</span><a href="../index.html">← All specimens</a></div></aside>
 
 <header class="top">
   <div class="wrap">

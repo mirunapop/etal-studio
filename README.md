@@ -21,7 +21,7 @@ CNAME, robots.txt, sitemap.xml, favicon.svg, apple-touch-icon.png, og-image.png
 python3 -m http.server
 ```
 
-Then open <http://localhost:8000>. Open it at the root, not in a subfolder, so the 404 page and its absolute paths behave like the real site.
+Then open <http://localhost:8000>. Python's server does not use `404.html`; it only appears on GitHub Pages. To look at it locally, open <http://localhost:8000/404.html>.
 
 ## Deploy to GitHub Pages
 
