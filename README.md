@@ -31,8 +31,8 @@ Do these in order.
 2. **Add the custom domain in GitHub first, before touching DNS.** Settings → Pages → Custom domain → `etal.studio` → Save. The `CNAME` file in this repo already contains it, so it survives deploys.
 3. **DNS at the registrar.**
    - Four `A` records for the apex `etal.studio`: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`.
-   - One `CNAME` record: host `www`, value `<username>.github.io`.
-4. **Verify the domain with a TXT record.** GitHub account → Settings → Pages → Add a domain → `etal.studio`. GitHub shows a TXT record (host `_github-pages-challenge-<username>`, plus a value). Add it at the registrar and click Verify. This stops anyone else claiming the domain on GitHub Pages. It can be done any time, and the earlier the better.
+   - One `CNAME` record: host `www`, value `mirunapop.github.io`.
+4. **Verify the domain with a TXT record.** GitHub account → Settings → Pages → Add a domain → `etal.studio`. GitHub shows a TXT record (host `_github-pages-challenge-mirunapop`, plus a value). Add it at the registrar and click Verify. This stops anyone else claiming the domain on GitHub Pages. It can be done any time, and the earlier the better.
 5. **Enforce HTTPS.** Once Settings → Pages shows that DNS check passed, tick *Enforce HTTPS*. GitHub has to issue the certificate first, so the box can be greyed out for a while after DNS changes.
 
 After step 5, open <https://etal.studio/>, <https://www.etal.studio/> (should redirect) and a bogus URL like <https://etal.studio/nope> (should show the 404 page).
